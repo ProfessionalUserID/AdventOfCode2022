@@ -1,6 +1,6 @@
 fun main(args: Array<String>) {
     println("Hello World!")
-    var ecksdee = "14"
+    var ecksdee = "18"
     print(ecksdee)
 
     // Try adding program arguments via Run/Debug configuration.

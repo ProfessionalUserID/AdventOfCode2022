@@ -1,9 +1,12 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
-    var ecksdee = "18"
-    print(ecksdee)
+import java.io.File
+import java.io.InputStream
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+    val inputStream: InputStream = File("src/main/input.txt").inputStream()
+    val lineList = mutableListOf<String>()
+
+    inputStream.bufferedReader().forEachLine { lineList.add(it) }
+    lineList.forEach{
+        println(">  " + it)
+    }
 }
